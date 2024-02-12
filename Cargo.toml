@@ -1,0 +1,15 @@
+[package]
+name = "calpal"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ical = { version = "0.10", features = ["ical", "vcard"] }
+rrule = { version = "0.11", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+regex = "1.5"
+peg = "0.8"
+tokio = { version = "1", features = ["full"] }
+reqwest = "0.11"
