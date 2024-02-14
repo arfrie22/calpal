@@ -3,12 +3,25 @@ pub mod event;
 pub mod timezone;   
 pub mod types;
 
+pub enum ICalTypes {
+    Binary,
+    Boolean,
+    CalAddress,
+    Date,
+    DateTime,
+    Duration,
+    Float,
+    Integer,
+    Period,
+    Recur,
+    Text,
+    Time,
+    URI,
+    UTCOffset,
+}
+
 pub enum Error {
-    InvalidDate,
-    InvalidTime,
-    InvalidDateTime,
-    InvalidTimeRange,
-    InvalidTimezone,
+    TypeDecode(ICalTypes),
 }
 
 pub fn add(left: usize, right: usize) -> usize {
